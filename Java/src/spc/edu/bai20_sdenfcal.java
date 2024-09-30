@@ -15,9 +15,96 @@ public class bai20_sdenfcal extends javax.swing.JFrame {
      */
     public bai20_sdenfcal() {
         initComponents();
+        jRadioButton1.setEnabled(false);
     }
-    double num1,num2,result;
+    double num1, num2, result;
     String opr;
+
+    public void enable() {
+        jTextField1.setEnabled(true);
+
+        jRadioButton1.setEnabled(false);
+        jRadioButton2.setEnabled(true);
+
+        jButton1.setEnabled(true);
+        jButton2.setEnabled(true);
+        jButton3.setEnabled(true);
+        jButton4.setEnabled(true);
+        jButton5.setEnabled(true);
+        jButton6.setEnabled(true);
+        jButton7.setEnabled(true);
+        jButton8.setEnabled(true);
+        jButton9.setEnabled(true);
+        jButton10.setEnabled(true);
+        jButton11.setEnabled(true);
+        jButton12.setEnabled(true);
+        jButton13.setEnabled(true);
+        jButton14.setEnabled(true);
+        jButton15.setEnabled(true);
+        jButton16.setEnabled(true);
+        jButton17.setEnabled(true);
+        jButton18.setEnabled(true);
+        jButton19.setEnabled(true);
+        jButton20.setEnabled(true);
+        jButton21.setEnabled(true);
+        jButton22.setEnabled(true);
+        jButton23.setEnabled(true);
+        jButton24.setEnabled(true);
+        jButton25.setEnabled(true);
+        jButton26.setEnabled(true);
+        jButton27.setEnabled(true);
+        jButton28.setEnabled(true);
+        jButton29.setEnabled(true);
+        jButton30.setEnabled(true);
+        jButton31.setEnabled(true);
+        jButton32.setEnabled(true);
+        jButton33.setEnabled(true);
+        jButton35.setEnabled(true);
+
+    }
+
+    public void disable() {
+        jTextField1.setEnabled(false);
+
+        jRadioButton1.setEnabled(true);
+        jRadioButton2.setEnabled(false);
+
+        jButton1.setEnabled(false);
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        jButton4.setEnabled(false);
+        jButton5.setEnabled(false);
+        jButton6.setEnabled(false);
+        jButton7.setEnabled(false);
+        jButton8.setEnabled(false);
+        jButton9.setEnabled(false);
+        jButton10.setEnabled(false);
+        jButton11.setEnabled(false);
+        jButton12.setEnabled(false);
+        jButton13.setEnabled(false);
+        jButton14.setEnabled(false);
+        jButton15.setEnabled(false);
+        jButton16.setEnabled(false);
+        jButton17.setEnabled(false);
+        jButton18.setEnabled(false);
+        jButton19.setEnabled(false);
+        jButton20.setEnabled(false);
+        jButton21.setEnabled(false);
+        jButton22.setEnabled(false);
+        jButton23.setEnabled(false);
+        jButton24.setEnabled(false);
+        jButton25.setEnabled(false);
+        jButton26.setEnabled(false);
+        jButton27.setEnabled(false);
+        jButton28.setEnabled(false);
+        jButton29.setEnabled(false);
+        jButton30.setEnabled(false);
+        jButton31.setEnabled(false);
+        jButton32.setEnabled(false);
+        jButton33.setEnabled(false);
+        jButton35.setEnabled(false);
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -75,9 +162,19 @@ public class bai20_sdenfcal extends javax.swing.JFrame {
 
         jRadioButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jRadioButton1.setText("on");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         jRadioButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jRadioButton2.setText("off");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("R");
@@ -89,12 +186,27 @@ public class bai20_sdenfcal extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("x^y");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("1/X");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton4.setText("n!");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton5.setText("x^2");
@@ -306,6 +418,11 @@ public class bai20_sdenfcal extends javax.swing.JFrame {
 
         jButton31.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton31.setText("+/-");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
 
         jButton32.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton32.setText(".");
@@ -545,12 +662,11 @@ public class bai20_sdenfcal extends javax.swing.JFrame {
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
         String backSpace = null;
-        
-        if(jTextField1.getText().length()>0)
-        {
+
+        if (jTextField1.getText().length() > 0) {
             StringBuilder s = new StringBuilder(jTextField1.getText());
-            
-            s.deleteCharAt(jTextField1.getText().length()-1);
+
+            s.deleteCharAt(jTextField1.getText().length() - 1);
             backSpace = s.toString();
             jTextField1.setText(backSpace);
         }
@@ -559,166 +675,218 @@ public class bai20_sdenfcal extends javax.swing.JFrame {
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
         num1 = Double.parseDouble(jTextField1.getText());
-        
+
         jTextField1.setText("");
         opr = "+";
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
-         num1 = Double.parseDouble(jTextField1.getText());
-        
+        num1 = Double.parseDouble(jTextField1.getText());
+
         jTextField1.setText("");
         opr = "-";
-        
+
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
-         num1 = Double.parseDouble(jTextField1.getText());
-        
+        num1 = Double.parseDouble(jTextField1.getText());
+
         jTextField1.setText("");
         opr = "*";
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
-         num1 = Double.parseDouble(jTextField1.getText());
-        
+        num1 = Double.parseDouble(jTextField1.getText());
+
         jTextField1.setText("");
         opr = "/";
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-         num1 = Double.parseDouble(jTextField1.getText());
-        
+        num1 = Double.parseDouble(jTextField1.getText());
+
         jTextField1.setText("");
         opr = "%";
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
         // TODO add your handling code here:
-         num2 = Double.parseDouble(jTextField1.getText());
-        
-         if(opr == "+")
-         {
-             result = num1 + num2 ;
-             jTextField1.setText(Double.toString(result));
-             
-         } else if (opr == "-") {
-             
-             result = num1 - num2 ;
-             jTextField1.setText(Double.toString(result));
-             
-         }else if (opr == "*"){
-             
-             result = num1 * num2 ;
-             jTextField1.setText(Double.toString(result));
-             
-         }else if (opr == "/"){
-             
-             result = num1/num2 ;
-             jTextField1.setText(Double.toString(result));
-             
-         }else if (opr == "%"){
-             
-             result = num1 % num2 ;
-             jTextField1.setText(Double.toString(result));
-         }
-       
+        num2 = Double.parseDouble(jTextField1.getText());
+
+        if (opr == "+") {
+            result = num1 + num2;
+            jTextField1.setText(Double.toString(result));
+
+        } else if (opr == "-") {
+
+            result = num1 - num2;
+            jTextField1.setText(Double.toString(result));
+
+        } else if (opr == "*") {
+
+            result = num1 * num2;
+            jTextField1.setText(Double.toString(result));
+
+        } else if (opr == "/") {
+
+            result = num1 / num2;
+            jTextField1.setText(Double.toString(result));
+
+        } else if (opr == "%") {
+
+            result = num1 % num2;
+            jTextField1.setText(Double.toString(result));
+
+        } else if (opr == "x^y") {
+
+            for (int i = 0; i < num2; i++) {
+
+                result = num1 * num2;
+            }
+            jTextField1.setText(Double.toString(result));
+        }
+
     }//GEN-LAST:event_jButton33ActionPerformed
+
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        double t=Math.sin(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.sin(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-         double t=Math.cos(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.cos(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
-        
+        jTextField1.setText(jTextField1.getText() + t);
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-         double t=Math.tan(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.tan(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-         double t=Math.sinh(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.sinh(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-         double t=Math.cosh(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.cosh(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
-         double t=Math.tanh(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.tanh(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-         double t=Math.log(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.log(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-         double t=Math.exp(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.exp(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         double t=1/(Double.parseDouble(jTextField1.getText()));
-        
+        double t = Math.sqrt(Double.parseDouble(jTextField1.getText()));
+
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         double t = Double.parseDouble(jTextField1.getText());
-        
-        t=t*t;
+
+        t = t * t;
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-          double t = Double.parseDouble(jTextField1.getText());
-        
-        t=t*t*t;
+        double t = Double.parseDouble(jTextField1.getText());
+
+        t = t * t * t;
         jTextField1.setText("");
-        jTextField1.setText(jTextField1.getText()+ t);
+        jTextField1.setText(jTextField1.getText() + t);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        num1 = Double.parseDouble(jTextField1.getText());
+
+        jTextField1.setText("");
+
+        opr = "x^y";
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        double t = Double.parseDouble(jTextField1.getText());
+
+        double fact = 1;
+        while (t != 0);
+        {
+
+            fact = fact * t;
+            t--;
+        }
+        jTextField1.setText("");
+        jTextField1.setText(jTextField1.getText() + fact);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        enable();
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        disable();
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        double t = 1 / (Double.parseDouble(jTextField1.getText()));
+
+        jTextField1.setText("");
+        jTextField1.setText(jTextField1.getText() + t);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        double t= Double.parseDouble(String.valueOf(jTextField1.getText()));
+        
+        t=t*(-1);
+        jTextField1.setText(String.valueOf(t));
+    }//GEN-LAST:event_jButton31ActionPerformed
 
     /**
      * @param args the command line arguments
